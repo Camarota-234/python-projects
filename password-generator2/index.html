@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script defer src="js/script.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <main>
+            <div class="titulo padding-5">
+                <h2>Selecione suas preferências para sua senha</h2>
+            </div>
+            <div class="row padding-5 col-12">
+                <form class="needs-validation" action="/" id="form" method="GET" novalidate>
+                    <div class="row">
+
+                        <div class="col-12 grupo">
+                            <div class="col-12">
+                                <label for="tamanho" class="form-label">Quantidade de caracteres da senha</label>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <input type="text" class="form-control" id="display" value="8"
+                                        oninput="tamanho.value=value" onchange="tamanho.value=value">
+                                </div>
+                                <div class="col-6 padding-1">
+                                    <input type="range" class="form-range" id="tamanho" name="tamanho" value="8" min="8"
+                                        max="100" oninput="display.value=value" onchange="display.value=value">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 grupo">
+                            <label for="botoes" class="form-label">O que gostaria de adicionar à sua senha?</label>
+                            <div class="row text-center">
+                                <div class="btn-group col-12" role="group"aria-label="Basic checkbox toggle button group"></div>
+
+                                <div class="col-3 caixa ">
+                                    <label class="label-botao" for="maiusculas">Letras Maiúsculas</label>
+                                    <input type="checkbox" class="botao" id="maiusculas" autocomplete="off">
+                                </div>
+                                <div class="col-3 caixa">
+                                    <label class="label-botao" for="minusculas">Letras minúsculas</label>
+                                    <input type="checkbox" class="botao" id="minusculas" autocomplete="off">
+                                </div>
+                                <div class="col-3 caixa">
+                                    <label class="label-botao" for="numero">Números</label>
+                                    <input type="checkbox" class="botao" id="numero" autocomplete="off">
+                                </div>
+                                <div class="col-3 caixa">
+                                    <label class="label-botao" for="simbolo">Símbolos</label>
+                                    <input type="checkbox" class="botao" id="simbolo" autocomplete="off">
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="col-12 grupo">
+                            <button class="btn-enviar btn-primary btn-lg" type="submit">Gerar senha</button>
+                        </div>
+                    </div>
+                </form>
+
+                <div class="col-12 grupo">
+                    <label for="final">Sua senha:</label>
+                    <input type="text" class="form-control final" id="final" readonly />
+                    <button id="botaocopia">
+                        <i class="fa fa-clone"></i>
+                    </button>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>
